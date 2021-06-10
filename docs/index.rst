@@ -1,21 +1,34 @@
-.. helloWorld documentation master file, created by
-   sphinx-quickstart on Fri Jul 17 10:38:59 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-test.box security concept!
+Welcome to our documentation!
 ======================================
 
 .. toctree::
+   :numbered:
+   :caption: Concept
+   :hidden:
    :maxdepth: 2
-   :caption: Contents:
 
-   autodoc
+   contents/about
+   contents/architecture
+   contents/processes/index
+   contents/usecases/index
 
+.. toctree::
+   :caption: Implementation
+   :maxdepth: 1
 
-Indices and tables
-==================
+   contents/implementation/endpoints
+   contents/implementation/datamodels
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :caption: References
+   :hidden:
+
+   contents/glossary
+
+.. toctree::
+   :caption: Testing
+   :hidden:
+
+   contents/demo
+
+This will be fun!
