@@ -7,6 +7,7 @@ protected
 
 These routes require an already authenticated user session
 
+.. _api-server-accesstoken:
 .. http:get:: /api/user/accessToken
 
     Requests a userAccessToken for the current user session
@@ -30,6 +31,7 @@ These routes require an already authenticated user session
     :status 200: if accessToken was generated
     :status 400: if something went wrong
 
+.. _api-server-getpubkey:
 .. http:get:: /api/user/(string:id)/publicKey
 
     Requests the public key of a given user
@@ -53,6 +55,7 @@ These routes require an already authenticated user session
     :status 200: if publicKey was found
     :status 400: if `id` was invalid
 
+.. _api-server-setpubkey:
 .. http:post:: /api/user/publicKey
 
     Updates the publicKey of the current session user
@@ -77,6 +80,7 @@ These routes require an already authenticated user session
     :status 200: if publicKey was saved
     :status 400: if something went wrong
 
+.. _api-server-getsecret:
 .. http:get:: /api/facility/(string:id)/secret
 
     Requests the user-specific encrypted secret of a specific facility. The user must be a member of this facility.
@@ -100,6 +104,7 @@ These routes require an already authenticated user session
     :status 200: user is member and secret was sent
     :status 400: something went wrong
 
+.. _api-server-getiv:
 .. http:get:: /api/facility/(string:id)/iv
 
     Requests the initilization vector of a specific facility. The user must be a member of this facility.
@@ -129,6 +134,7 @@ keyserver-only
 
 These endpoints are only available for the key.box
 
+.. _api-server-validate:
 .. http:post:: /keyserver/user/validate
 
     Validates a given userAccessToken against the corresponding user data.

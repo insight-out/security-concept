@@ -25,10 +25,4 @@ Welcome to our documentation!
 
    contents/glossary
 
-.. toctree::
-   :caption: Testing
-   :hidden:
-
-   contents/demo
-
 This will be fun!

@@ -8,5 +8,5 @@ In this document, endpoints relevant for this concept are documented.
     :maxdepth: 1
 
     ../api/server
-    ../api/keybox
+    ../api/keyserver
 
