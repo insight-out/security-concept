@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'helloWorld'
-copyright = '2020, Michael Altfield'
-author = 'Michael Altfield'
+project = 'test.box security concept'
+copyright = '2021, insight.out GmbH'
+author = 'Matthias Streuber'
 
 # The short X.Y version
 version = ''
