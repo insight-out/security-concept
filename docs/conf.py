@@ -16,6 +16,11 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# Workaround for https://github.com/mgaitan/sphinxcontrib-mermaid/issues/72
+
+import errno
+import sphinx.util.osutil
+sphinx.util.osutil.ENOENT = errno.ENOENT
 
 # -- Project information -----------------------------------------------------
 
@@ -24,7 +29,7 @@ copyright = '2021, insight.out GmbH'
 author = 'Matthias Streuber'
 
 # The short X.Y version
-version = ''
+version = '1.0'
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
 
@@ -108,7 +113,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'helloWorlddoc'
+htmlhelp_basename = 'testbox-scdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -135,8 +140,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'helloWorld.tex', 'helloWorld Documentation',
-     'Michael Altfield', 'manual'),
+    (master_doc, 'testbox-sc.tex', 'test.box security concept',
+     'Matthias Streuber', 'manual'),
 ]
 
 
@@ -145,7 +150,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'helloworld', 'helloWorld Documentation',
+    (master_doc, 'testbox-sc', 'test.box security concept',
      [author], 1)
 ]
 
@@ -156,9 +161,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'helloWorld', 'helloWorld Documentation',
-     author, 'helloWorld', 'One line description of project.',
-     'Miscellaneous'),
+    (master_doc, 'testbox-sc', 'test.box security concept',
+     author, 'testbox-sc', 'security concept of testbox.de',
+     'Security'),
 ]
 
 
@@ -267,7 +272,9 @@ html_context['downloads'].append( ('epub', '/' +REPO_NAME+ '/' +current_language
 ##########################
  
 html_context['display_github'] = True
-html_context['github_user'] = 'maltfield'
-html_context['github_repo'] = 'rtd-github-pages'
+html_context['github_user'] = 'insight-out'
+html_context['github_repo'] = 'security-concept'
 html_context['github_version'] = 'master/docs/'
+
+html_favicon = 'images/logo.ico'
  
