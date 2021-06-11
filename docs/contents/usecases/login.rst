@@ -25,10 +25,12 @@ Login
 
 If the user is not secured, key material is generated, see :ref:`processes-create-keypair`.
 Otherwise, the following processes run in parallel:
+
 * :ref:`processes-get-secret`
 * :ref:`processes-get-privkey`
 
 3. decryption and validation of key and secret:
+
    * ``encryptedPrivateKey`` gets decrypted with the users password.
    * ``encryptedSecret`` gets decrypted with the ``privateKey``.
 
