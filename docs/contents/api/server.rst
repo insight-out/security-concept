@@ -128,6 +128,52 @@ These routes require an already authenticated user session
     :status 200: user is member and iv was sent
     :status 400: something went wrong
 
+.. _api-server-getsessionchallenge:
+.. http:get:: /api/user/session-challenge
+
+    Requests an encrypted session token to verify the integrity of the clients private key.
+
+    **Example request**:
+
+    .. sourcecode:: http
+
+        GET /api/user/session-challenge HTTP/1.1
+        Content-Type: application/json
+
+    **Example response**:
+
+    .. sourcecode:: http
+
+        HTTP/1.1 200 OK
+        Content-Type: text/javascript
+
+        "some encrypted token"
+
+    :status 200: user is secured and token was sent
+    :status 400: something went wrong
+
+.. _api-server-sendsessionchallenge:
+.. http:post:: /api/user/session-challenge
+
+    Sends a session token to verify integrity of users private key
+
+    **Example request**:
+
+    .. sourcecode:: http
+
+        POST /api/user/session-challenge HTTP/1.1
+        Content-Type: application/json
+
+    **Example response**:
+
+    .. sourcecode:: http
+
+        HTTP/1.1 200 OK
+        Content-Type: text/javascript
+
+    :form token: the session challenge token
+    :status 200: if token was valid
+    :status 400: if something went wrong
 
 keyserver-only
 ==============

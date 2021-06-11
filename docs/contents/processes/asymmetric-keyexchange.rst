@@ -55,3 +55,24 @@ Get private key
 4. validate accessToken, see :ref:`API <api-server-validate>`
 5. obligatory success status
 6. return encryptedPrivateKey, salt and iv
+
+.. _processes-session-challenge:
+
+Session challenge
+-----------------
+
+.. mermaid::
+
+    sequenceDiagram;
+        autonumber
+        Client->>+Server: getSessionChallenge()
+        Server-->>-Client: encryptedToken
+        Client->>Client: decrypt(encryptedToken, privateKey)
+        Client->>+Server: submitSessionChallenge(decryptedToken)
+        Server-->>-Client: success
+
+1. request an encrypted session token, see :ref:`API <api-server-getsessionchallenge>`
+2. send encrypted session token
+3. decrypt session token using the previously decrypted private key
+4. send decrypted session token for validation, see :ref:`API <api-server-sendsessionchallenge>`
+5. obligatory success status

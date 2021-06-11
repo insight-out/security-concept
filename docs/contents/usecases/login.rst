@@ -17,7 +17,7 @@ Login
         Note over Client,KeyServer: processes/get-privkey
         end
         Client->>Client: decrypt(encryptedKey, encryptedSecret)
-        Client->>Server: success
+        Note over Client,Server: processes/session-challenge
 
 
 1. regular authentication request
@@ -31,4 +31,5 @@ Otherwise, the following processes run in parallel:
 3. decryption and validation of key and secret:
    * ``encryptedPrivateKey`` gets decrypted with the users password.
    * ``encryptedSecret`` gets decrypted with the ``privateKey``.
-4. let the test.box know that the session is now considered secured.
+
+As a final step, the client requests a :ref:`processes-session-challenge` to validate the private key.
