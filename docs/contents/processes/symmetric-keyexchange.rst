@@ -41,3 +41,25 @@ Get secret
 
 1. request the users encrypted facility member secret (one per facility)
 2. server sends the secret
+
+Session challenge
+-----------------
+
+A simple mechanic to check the integrity of the users key pair. If successful, the session is considered ``secured``.
+Otherwise, further requests to the server for protected endpoints are denied.
+
+.. mermaid::
+
+    sequenceDiagram;
+        autonumber
+        Client->>+Server: getSessionChallenge()
+        Server-->>-Client: (encryptedSessionToken)
+        Client->>Client: decrypt token
+        Client->>+Server: submitSessionChallenge()
+        Server-->>-Client: (success)
+
+1. request a token encrypted with the users public key, see :ref:`API <api-server-getsessionchallenge>`
+2. server sends the token
+3. client decrypts the token with the users private key
+4. send the decrypted token for validation, see :ref:`API <api-server-sendsessionchallenge>`
+5. returns true if the encrypted token matches the original token
