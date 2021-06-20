@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.1. Register &mdash; documentación de test.box security concept - 1.0.0</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/logo.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="4.2. Login" href="login.html" />
+    <link rel="prev" title="4. Use cases" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> test.box security concept
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Concept</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">2. Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processes/index.html">3. Processes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Use cases</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. Register</a></li>
+<li class="toctree-l2"><a class="reference internal" href="login.html">4.2. Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-member.html">4.3. Add member</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Implementation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../implementation/endpoints.html">Endpoints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../implementation/datamodels.html">Data models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">test.box security concept</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">4. </span>Use cases</a> &raquo;</li>
+        
+      <li><span class="section-number">4.1. </span>Register</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/insight-out/security-concept/blob/master/docs/contents/usecases/register.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="register">
+<h1><span class="section-number">4.1. </span>Register<a class="headerlink" href="#register" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><strong>This process applies only for facility admins registering a new account while creating a facility.</strong></p>
+<p>MATZE: hier müssen wir nocheinmal trennen zwischen Praxisleiter, B2C und der Erstellung neuer Praxen ohne Registrierung!</p>
+<div class="mermaid">
+            sequenceDiagram
+    autonumber
+    Client-&gt;&gt;Server: register(email, password)
+    Server-&gt;&gt;Client: userID, accessToken
+    Client-&gt;&gt;Client: createKeys()
+    Client-&gt;&gt;Client: encryptKey(privateKey, password)
+    Client-&gt;&gt;+KeyServer: newUser(accessToken, userID, encryptedPrivateKey)
+    KeyServer-&gt;&gt;+Server: validateUser(userID, accessToken, certificate)
+    Server-&gt;&gt;-KeyServer: valid
+    KeyServer--&gt;-Client: success-response
+    Client-&gt;&gt;Client: createSecrets()
+    Client-&gt;&gt;Client: encryptSecrets(secrets, publicKey)
+    Client-&gt;&gt;Client: encryptInsioSecrets(secrets, insioPublicKey)
+    Client-&gt;&gt;Server: secureUser(encryptedSecrets, encryptedInsioSecrets, publicKey)
+    Note over Client,Server: Email verification process
+        </div><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">register(email,</span> <span class="pre">password)</span></code>: creates new user on the server</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userToken</span></code>: used to identify this request (secret token of a user)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createSecrets</span></code>: creates multiple randomly generated secrets, these secrest are used to encrypt all data for this client, we need multiple keys to be able to allow multiple clients of one organisation to be able to have different roles/functionalities/permissions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createKeys()</span></code>: Creates a public - private Keypair</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptKey(privateKey,</span> <span class="pre">password)</span></code>: encrypt the private key so it can be stored on the KeyServer without risk and the user can access it again, using his password</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">newUser(userToken,</span> <span class="pre">encryptedPrivateKey)</span></code>: tells the keyserver that there is a new user (to be able to match the user on Server and KeyServer, we user the <code class="docutils literal notranslate"><span class="pre">userToken</span></code>) and gives the <code class="docutils literal notranslate"><span class="pre">encryptedPrivateKey</span></code> to the Keyserver</p></li>
+<li><p>The KeyServer asks the Server to validate the userToken</p></li>
+<li><p>If the userToken was found in the database, some sort of success message is returned</p></li>
+<li><p>KeyServer must send some sort of success, so we know we can proceed - otherwise, something went wrong and we need to restart the process.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptSecrets(secrets,</span> <span class="pre">publicKey)</span></code>: use the public key to encrypt all the secrets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptInsioSecrets(secrets,</span> <span class="pre">insioPublicKey)</span></code>: use the Insio publicKey to encrypt all the secrets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secureUser(encryptedSecrets,</span> <span class="pre">encryptedInsioSecrets,</span> <span class="pre">publicKey)</span></code>: Tell the Server the encrypted secrets and the publicKey. From here on, the user is considered “secure”</p></li>
+</ol>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="login.html" class="btn btn-neutral float-right" title="4.2. Login" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="4. Use cases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, insight.out GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+          
+          <dd><a href="/security-concept/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/security-concept/es/master/">es</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+           <strong> 
+          <dd><a href="/security-concept/es/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/security-concept/es/master/test.box security concept-docs_es_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/security-concept/es/master/test.box security concept-docs_es_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

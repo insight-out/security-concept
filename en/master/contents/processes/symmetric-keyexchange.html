@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.2. Symmetric Key Exchange &mdash; test.box security concept 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/logo.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Use cases" href="../usecases/index.html" />
+    <link rel="prev" title="3.1. Asymmetric Key Exchange" href="asymmetric-keyexchange.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> test.box security concept
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                master
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Concept</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">2. Architecture</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Processes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="asymmetric-keyexchange.html">3.1. Asymmetric Key Exchange</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Symmetric Key Exchange</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-secret">3.2.1. Create secret</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-secret">3.2.2. Get secret</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#session-challenge">3.2.3. Session challenge</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usecases/index.html">4. Use cases</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Implementation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../implementation/endpoints.html">Endpoints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../implementation/datamodels.html">Data models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">test.box security concept</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">3. </span>Processes</a> &raquo;</li>
+        
+      <li><span class="section-number">3.2. </span>Symmetric Key Exchange</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/insight-out/security-concept/blob/master/docs/contents/processes/symmetric-keyexchange.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="symmetric-key-exchange">
+<h1><span class="section-number">3.2. </span>Symmetric Key Exchange<a class="headerlink" href="#symmetric-key-exchange" title="Permalink to this headline">¶</a></h1>
+<section id="create-secret">
+<span id="processes-create-secret"></span><h2><span class="section-number">3.2.1. </span>Create secret<a class="headerlink" href="#create-secret" title="Permalink to this headline">¶</a></h2>
+<div class="mermaid">
+            sequenceDiagram;
+    autonumber
+    opt facility creation
+    Client-&gt;&gt;Client: createSecret()
+    end
+    Client-&gt;&gt;+Server: getPublicKeyForUser(userID)
+    Server--&gt;&gt;-Client: (publicKey)
+    Client-&gt;&gt;Client: encryptSecret(publicKey)
+    Client-&gt;&gt;+Server: putEncryptedSecret()
+    Server--&gt;&gt;-Client: success
+        </div><ol class="arabic simple">
+<li><p>in case a facility secret was not already created, the corresponding secret is created here.</p></li>
+<li><p>OBSOLETE: the public key must not be requested as it is part of the security store in VueX</p></li>
+<li><p>OBSOLETE</p></li>
+<li><p>encrypt the facility secret</p></li>
+<li><p>send memberSecret to the server</p></li>
+<li><p>obligatory success message</p></li>
+</ol>
+</section>
+<section id="get-secret">
+<span id="processes-get-secret"></span><h2><span class="section-number">3.2.2. </span>Get secret<a class="headerlink" href="#get-secret" title="Permalink to this headline">¶</a></h2>
+<div class="mermaid">
+            sequenceDiagram;
+    autonumber
+    Client-&gt;&gt;+Server: getMyEncryptedSecret(facilityID)
+    Server--&gt;&gt;-Client: (encryptedSecret)
+        </div><ol class="arabic simple">
+<li><p>request the users encrypted facility member secret (one per facility)</p></li>
+<li><p>server sends the secret</p></li>
+</ol>
+</section>
+<section id="session-challenge">
+<h2><span class="section-number">3.2.3. </span>Session challenge<a class="headerlink" href="#session-challenge" title="Permalink to this headline">¶</a></h2>
+<p>A simple mechanic to check the integrity of the users key pair. If successful, the session is considered <code class="docutils literal notranslate"><span class="pre">secured</span></code>.
+Otherwise, further requests to the server for protected endpoints are denied.</p>
+<div class="mermaid">
+            sequenceDiagram;
+    autonumber
+    Client-&gt;&gt;+Server: getSessionChallenge()
+    Server--&gt;&gt;-Client: (encryptedSessionToken)
+    Client-&gt;&gt;Client: decrypt token
+    Client-&gt;&gt;+Server: submitSessionChallenge()
+    Server--&gt;&gt;-Client: (success)
+        </div><ol class="arabic simple">
+<li><p>request a token encrypted with the users public key, see <a class="reference internal" href="../api/server.html#api-server-getsessionchallenge"><span class="std std-ref">API</span></a></p></li>
+<li><p>server sends the token</p></li>
+<li><p>client decrypts the token with the users private key</p></li>
+<li><p>send the decrypted token for validation, see <a class="reference internal" href="../api/server.html#api-server-sendsessionchallenge"><span class="std std-ref">API</span></a></p></li>
+<li><p>returns true if the encrypted token matches the original token</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../usecases/index.html" class="btn btn-neutral float-right" title="4. Use cases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="asymmetric-keyexchange.html" class="btn btn-neutral float-left" title="3.1. Asymmetric Key Exchange" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, insight.out GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+           <strong> 
+          <dd><a href="/security-concept/en/master/">en</a></dd>
+           </strong> 
+        
+          
+          <dd><a href="/security-concept/es/master/">es</a></dd>
+          
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+           <strong> 
+          <dd><a href="/security-concept/en/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="/security-concept/en/master/test.box security concept-docs_en_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/security-concept/en/master/test.box security concept-docs_en_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
